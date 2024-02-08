@@ -5,9 +5,13 @@ const jokeContainer = document.querySelector(".joke-container");
 // FETCH JOKE FUNCTION
 
 const fetchJoke = async ()=> {
-	const response = await fetch("https://api.chucknorris.io/jokes/random");
-	const data = await response.json();
-	renderJoke(data.value)
+	try {
+		const response = await fetch("https://api.chucknorris.io/jokes/rando");
+		const data = await response.json();
+		renderJoke(data.value)
+	} catch (error) {
+		console.log("Fail", error);
+	}
 }
 
 // RENDER JOKE FUNCTION
