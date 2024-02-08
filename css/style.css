@@ -5,6 +5,7 @@
 }
 
 body {
+
 	font-size: 24px;
 	width: 100%;
 	height: 100vh;
@@ -17,11 +18,16 @@ main {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	padding: 10rem;
 }
 
 button {
 	font-size: inherit;
 	padding: 10px 30px;
 	background: pink;
+}
+
+p {
+	margin-bottom: 2rem;
 }
 

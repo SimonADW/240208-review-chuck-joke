@@ -4,11 +4,11 @@ const jokeContainer = document.querySelector(".joke-container");
 
 const fetchJoke = async () => {
 	try {
-		const response = await fetch("https://api.chucknorris.io/jokes/rando");
+		const response = await fetch("https://api.chucknorris.io/jokes/random");
 		const data = await response.json();
-		return data.value
+		return data.value; 		
 	} catch (error) {
-		console.log("Something went wrong", error);
+		console.log("Fail",error);		
 	}
 }
 
@@ -22,5 +22,5 @@ const renderJoke = async ()=> {
 	}
 }
 
-jokeButton.addEventListener("click", renderJoke);
+jokeButton.addEventListener("click", fetchJoke);
 
