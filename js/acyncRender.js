@@ -22,5 +22,5 @@ const renderJoke = async ()=> {
 	}
 }
 
-jokeButton.addEventListener("click", fetchJoke);
+jokeButton.addEventListener("click", renderJoke);
 
